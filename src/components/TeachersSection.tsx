@@ -180,6 +180,3 @@ export default function TeachersSection() {
     </section>
   );
 }
-
-
-export default TeachersSection
