@@ -5,6 +5,7 @@ import NextSection from '@/components/NextSection';
 import RoadmapSection from '@/components/RoadmapSection';
 import CoursesSection from '@/components/CoursesSection';
 import CtaSection from '@/components/CtaSection';
+import TeachersSection from '@/components/TeachersSection';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <RoadmapSection />
       <CoursesSection />
       <CtaSection />
+      <TeachersSection />
       <NextSection />
       {/* Circular calligraphy medallion straddling the boundary between hero and about section */}
       <div className="absolute left-1/2 top-[100vh] -translate-x-1/2 -translate-y-1/2 z-50">
