@@ -126,15 +126,15 @@ export default function TeachersSection() {
         <div className="mt-10"><GoldDivider /></div>
 
         <div className="relative px-0 sm:px-10">
-          <button type="button" onClick={() => scrollToIndex(Math.max(0, activeIndex - 1))} disabled={activeIndex === 0} aria-label="Giảng viên trước" className="absolute left-0 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-brand-gold-deep bg-brand-cream text-brand-gold-deep shadow-md transition-colors hover:bg-brand-gold hover:text-brand-brown disabled:pointer-events-none disabled:opacity-30 sm:flex">
-            <ArrowLeft className="h-5 w-5" />
+          <button type="button" onClick={() => scrollToIndex(Math.max(0, activeIndex - 1))} disabled={activeIndex === 0} aria-label="Giảng viên trước" className="absolute left-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-brand-gold-deep bg-brand-cream text-brand-gold-deep shadow-md transition-colors hover:bg-brand-gold hover:text-brand-brown disabled:pointer-events-none disabled:opacity-30 sm:h-11 sm:w-11">
+            <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5" />
           </button>
           <div ref={carouselRef} onScroll={handleScroll} className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:gap-8">
             {teachers.map((teacher) => (
-              <article key={teacher.name} className="group min-w-0 shrink-0 basis-full snap-start overflow-hidden rounded-2xl border border-brand-gold-light/70 bg-white p-3 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:basis-[calc((100%-1.5rem)/2)] lg:basis-[calc((100%-4rem)/3)]">
+              <article key={teacher.name} className="group min-w-0 shrink-0 basis-full snap-start overflow-hidden rounded-2xl border border-brand-gold-light/70 bg-white p-3 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:basis-[calc((100%-1.5rem)/2)] lg:basis-[calc((100%-2rem)/2)]">
                 <div className="relative overflow-visible">
-                  <div className="aspect-[3/4] overflow-hidden rounded-xl border border-brand-gold/60">
-                    <img src={teacher.photo} alt={teacher.name} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div className="overflow-hidden rounded-xl border border-brand-gold/60 bg-brand-red">
+                    <img src={teacher.photo} alt={teacher.name} className="block h-auto w-full object-contain transition-transform duration-500 group-hover:scale-[1.02]" />
                   </div>
                   <div className="absolute -bottom-3 left-4 rounded-full bg-brand-gold px-3 py-1.5 font-sans text-[10px] font-bold uppercase tracking-wide text-brand-brown shadow-md">
                     Giảng Viên 5 Sao <Stars />
@@ -148,8 +148,8 @@ export default function TeachersSection() {
               </article>
             ))}
           </div>
-          <button type="button" onClick={() => scrollToIndex(Math.min(pageCount - 1, activeIndex + 1))} disabled={activeIndex === pageCount - 1} aria-label="Giảng viên tiếp theo" className="absolute right-0 top-1/2 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-brand-gold-deep bg-brand-cream text-brand-gold-deep shadow-md transition-colors hover:bg-brand-gold hover:text-brand-brown disabled:pointer-events-none disabled:opacity-30 sm:flex">
-            <ArrowRight className="h-5 w-5" />
+          <button type="button" onClick={() => scrollToIndex(Math.min(pageCount - 1, activeIndex + 1))} disabled={activeIndex === pageCount - 1} aria-label="Giảng viên tiếp theo" className="absolute right-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-brand-gold-deep bg-brand-cream text-brand-gold-deep shadow-md transition-colors hover:bg-brand-gold hover:text-brand-brown disabled:pointer-events-none disabled:opacity-30 sm:h-11 sm:w-11">
+            <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
           </button>
         </div>
 
@@ -180,3 +180,6 @@ export default function TeachersSection() {
     </section>
   );
 }
+
+
+export default TeachersSection

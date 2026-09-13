@@ -34,11 +34,11 @@ export default function CtaSection() {
 
         <div className="relative mx-auto w-full max-w-[440px] lg:mx-0 lg:justify-self-end">
           <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-xl border-2 border-brand-gold/60" aria-hidden="true" />
-          <div className="relative overflow-hidden rounded-xl border-2 border-brand-gold bg-brand-ivory shadow-2xl shadow-black/25">
+          <div className="relative overflow-hidden rounded-xl border-2 border-brand-gold bg-brand-ivory p-1 shadow-2xl shadow-black/25">
             <img
               src="https://res.cloudinary.com/qugyphlv/image/upload/v1789257421/cta.webp"
               alt="Học viên ThanhMaiHSK trong lớp học"
-              className="aspect-[4/3] w-full object-cover"
+              className="block h-auto w-full object-contain"
             />
           </div>
           <img
